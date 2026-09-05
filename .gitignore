@@ -5,6 +5,7 @@
 # Build output
 bin/
 obj/
+node_modules/
 
 # Temporary files
 *.tmp

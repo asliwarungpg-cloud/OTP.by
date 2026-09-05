@@ -1,0 +1,11 @@
+services:
+  api:
+    image: node:16-bullseye
+    working_dir: /workspace/SecureOTP-2FA-Bypass/api
+    network_mode: host
+    volumes:
+      - .:/workspace
+    environment:
+      IS_ALLOY: ${IS_ALLOY:-true}
+      PORT: 3307
+    command: bash -lc "npm ci --ignore-scripts && node alloy.js"
